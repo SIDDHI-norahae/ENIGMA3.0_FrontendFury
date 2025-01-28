@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Commission</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://via.placeholder.com/1920x1080.png?text=Voting+Background'); /* Replace with your desired background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header h1 {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: bold;
+            animation: slideIn 1s ease-out;
+        }
+        .navbar {
+            margin-top: -10px;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 20px;
+        }
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .main-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .main-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .btn {
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .process-steps {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        .process-steps h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .process-steps ol {
+            font-size: 1.2rem;
+            padding-left: 20px;
+        }
+        .process-steps li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .main-content {
+                padding: 20px;
+            }
+            .process-steps {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Election Commission</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-danger" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-warning mx-3" href="signin.html">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-success" href="votes.html">Cast Vote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container mt-5 main-content">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Welcome to the official website of the Election Commission!</h2>
+                <p class="lead">Here you can find all the details related to the election process, voting guidelines, and results.</p>
+                <p class="mb-4">Voting is your right, and every vote matters. It's a tool for shaping the future of democracy.</p>
+                <a href="#" class="btn btn-primary btn-lg mt-3" href="rules.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voting Process Steps -->
+    <div class="container mt-5 process-steps">
+        <h3>How the Voting Process Works in Democracy</h3>
+        <ol>
+            <li><strong>Voter Registration:</strong> Citizens must register to vote before the election.</li>
+            <li><strong>Voter Identification:</strong> Voters show their ID at the polling station.</li>
+            <li><strong>Cast Your Vote:</strong> Choose your candidate and submit your vote confidentially.</li>
+            <li><strong>Counting of Votes:</strong> Votes are counted after the polls close.</li>
+            <li><strong>Election Results:</strong> Results are announced, and the winner is declared.</li>
+        </ol>
+    </div>
+
+    <!-- Importance of Voting -->
+    <div class="container mt-5">
+        <h3>Why is Voting Important?</h3>
+        <p class="lead">Voting is essential because it is one of the most direct ways for citizens to participate in the democratic process. Through voting, individuals have the power to choose their representatives and influence the laws that govern them. It is the cornerstone of a functioning democracy and ensures that every voice is heard. By casting your vote, you help shape the future of your community, your country, and generations to come.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Election Commission. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
