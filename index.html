@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encryption Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-5">Encrypt User ID & Voter ID</h2>
+    <form id="encryptionForm">
+      <div class="form-group">
+        <label for="userId">User ID</label>
+        <input type="text" class="form-control" id="userId" placeholder="Enter User ID">
+      </div>
+      <div class="form-group">
+        <label for="voterId">Voter ID</label>
+        <input type="text" class="form-control" id="voterId" placeholder="Enter Voter ID">
+      </div>
+      <button type="submit" class="btn btn-primary">Encrypt</button>
+    </form>
+
+    <div id="result" class="mt-4"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#encryptionForm').on('submit', function(e) {
+      e.preventDefault();
+
+      const userId = $('#userId').val();
+      const voterId = $('#voterId').val();
+
+      $.ajax({
+        url: '/encrypt',
+        type: 'POST',
+        data: { userId, voterId },
+        success: function(response) {
+          $('#result').html('<p><strong>Encrypted User ID:</strong> ' + response.encryptedUserId + '</p><p><strong>Encrypted Voter ID:</strong> ' + response.encryptedVoterId + '</p>');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
